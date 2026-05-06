@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALNJATH PHOTOGRAPHY</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-logo">ALNJATH</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#booking" class="nav-book-btn">Book Now</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" onclick="closeMobile()">Home</a></li>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#portfolio" onclick="closeMobile()">Portfolio</a></li>
+      <li><a href="#services" onclick="closeMobile()">Services</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+      <li><a href="#booking" onclick="closeMobile()" class="mobile-book">Book Now</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-bg-text">PHOTOGRAPHY</div>
+    <div class="hero-content">
+      <p class="hero-tagline">Capturing Moments, Creating Memories</p>
+      <h1 class="hero-title">ALNJATH<br/><em>Photography</em></h1>
+      <p class="hero-sub">Where every frame tells a story worth keeping forever.</p>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        <a href="#booking" class="btn-secondary">Book a Session</a>
+      </div>
+    </div>
+    <div class="hero-image-frame">
+      <!--
+        ============================================================
+        ADD YOUR HERO/PROFILE PHOTO HERE
+        Replace the src below with your image path or URL.
+        Example: src="images/hero-photo.jpg"
+        ============================================================
+      -->
+      <img
+        src="{css,js,images}/ii.jpg  "
+        alt="ALNJATH Photography Hero"
+        class="hero-photo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <div class="hero-photo-placeholder">
+        <span>📸</span>
+        <p>Add your photo here<br/><small>src="images/hero-photo.jpg"</small></p>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="about-inner">
+      <div class="about-image-col">
+        <!--
+          ============================================================
+          ADD YOUR PORTRAIT / ABOUT PHOTO HERE
+          Replace src with your image path.
+          Example: src="images/about-photo.jpg"
+          ============================================================
+        -->
+        <img
+          src="{css,js,images}/IMG_0587.JPG"
+          alt="About ALNJATH"
+          class="about-photo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="about-photo-placeholder">
+          <span>🖼️</span>
+          <p>About Photo<br/><small>src="images/about-photo.jpg"</small></p>
+        </div>
+        <div class="about-badge">
+          <span class="badge-num">5+</span>
+          <span class="badge-text">Years of<br/>Experience</span>
+        </div>
+      </div>
+      <div class="about-text-col">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">The Eye Behind<br/><em>The Lens</em></h2>
+        <p class="about-desc">
+          Welcome to ALNJATH Photography — where passion meets precision.
+          I believe every moment has a soul, and my mission is to freeze it
+          in time, beautifully and honestly.
+        </p>
+        <p class="about-desc">
+          From intimate portraits to grand celebrations, I bring a cinematic
+          eye and a gentle presence to every session, ensuring you feel
+          comfortable and the results speak for themselves.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Sessions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">200+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Awards</span>
+          </div>
+        </div>
+        <a href="#booking" class="btn-primary">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="portfolio">
+    <div class="section-header">
+      <p class="section-label">My Work</p>
+      <h2 class="section-title">Featured <em>Portfolio</em></h2>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="portrait">Portrait</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="landscape">Landscape</button>
+      <button class="filter-btn" data-filter="event">Event</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-grid">
+
+      <!--
+        ============================================================
+        HOW TO ADD YOUR PORTFOLIO PHOTOS:
+        1. Place your images inside the "images/" folder
+        2. Change src="images/photo1.jpg" to your actual filename
+        3. Update data-category: portrait | wedding | landscape | event
+        4. Update alt text to describe your photo
+        ============================================================
+      -->
+
+      <div class="portfolio-item" data-category="portrait">
+        <img src="{css,js,images}/IMG_0588.JPG" alt="Portrait Photography 1"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo1.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Portrait</p>
+          <h3 class="port-title">Golden Hour Portrait</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item large" data-category="wedding">
+        <img src="{css,js,images}/_MG_0197.jpg" alt="Wedding Photography"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo2.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Wedding</p>
+          <h3 class="port-title">Timeless Wedding</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="landscape">
+        <img src="{css,js,images}/_MG_0290 (1).jpg" alt="Landscape Photography"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo3.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Landscape</p>
+          <h3 class="port-title">wedding</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="event">
+        <img src="{css,js,images}/_MG_1748.jpg" alt="Event Photography"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo4.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Event</p>
+          <h3 class="port-title">baby shoot</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item large" data-category="portrait">
+        <img src="{css,js,images}/_MG_1750.jpg" alt="Studio Portrait"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo5.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Portrait</p>
+          <h3 class="port-title">Studio Session</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="landscape">
+        <img src="{css,js,images}/_MG_1751 (1).jpg" alt="Landscape Photography 2"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo6.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Landscape</p>
+          <h3 class="port-title">baby shoot</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="wedding">
+        <img src="{css,js,images}/_MG_7146.jpg" alt="Wedding Detail"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo7.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Wedding</p>
+          <h3 class="port-title">Ceremony Details</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="event">
+        <img src="{css,js,images}/_MG_7220.jpg" alt="Corporate Event"
+          onerror="this.parentElement.querySelector('.port-placeholder').style.display='flex'; this.style.display='none';" />
+        <div class="port-placeholder"><span>📷</span><p>photo8.jpg</p></div>
+        <div class="port-overlay">
+          <p class="port-cat">Event</p>
+          <h3 class="port-title">Couple shoot</h3>
+        </div>
+      </div>
+
+    </div><!-- end portfolio-grid -->
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+    <div class="section-header light">
+      <p class="section-label">What I Offer</p>
+      <h2 class="section-title">Photography <em>Services</em></h2>21
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">💍</div>
+        <h3>Wedding Photography</h3>
+        <p>Full-day coverage of your most important day with a cinematic storytelling approach.</p>
+        <span class="service-price">From rs.10000</span>
+      </div>
+      <div class="service-card featured">
+        <div class="service-icon">🎭</div>
+        <h3>Portrait Sessions</h3>
+        <p>Individual, couple, and family portraits that reveal genuine emotion and personality.</p>
+        <span class="service-price">From rs.5000</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎪</div>
+        <h3>Event Coverage</h3>
+        <p>Corporate events, birthdays, graduations — no moment goes uncaptured.</p>
+        <span class="service-price">From rs.7000</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌄</div>
+        <h3>Landscape & Travel</h3>
+        <p>Fine-art landscape photography available as prints for your home or office.</p>
+        <span class="service-price">From rs.7000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section id="booking" class="booking">
+    <div class="booking-inner">
+      <div class="booking-text">
+        <p class="section-label">Let's Work Together</p>
+        <h2 class="section-title">Book Your<br/><em>Session</em></h2>
+        <p class="booking-desc">
+          Ready to create something beautiful? Fill out the form and
+          I'll get back to you within 24 hours to confirm your booking.
+        </p>
+        <div class="booking-contact-info">
+          <p>📧 alnjath@photography.com</p>
+          <p>📞 0754540467</p>
+          <p>📍 kinniya-05</p>
+        </div>
+      </div>
+      <div class="booking-form-wrap">
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="clientName" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="clientEmail" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="clientPhone" placeholder="+1 000 000 0000" />
+            </div>
+            <div class="form-group">
+              <label>Session Date *</label>
+              <input type="date" id="sessionDate" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Required *</label>
+            <select id="serviceType" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="wedding">Wedding Photography</option>
+              <option value="portrait">Portrait Session</option>
+              <option value="event">Event Coverage</option>
+              <option value="landscape">Landscape / Travel</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="clientMsg" rows="4" placeholder="Tell me about your vision, location, or any special requests..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Book Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✓</div>
+          <h3>Booking Request Sent!</h3>
+          <p>Thank you! I'll be in touch within 24 hours to confirm your session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header">
+      <p class="section-label">Client Love</p>
+      <h2 class="section-title">What They <em>Say</em></h2>
+    </div>
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial-card">
+        <p class="testi-text">"ALNJATH captured our wedding day perfectly. Every emotion, every laugh — it's all there. These photos are treasures we'll keep forever."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <strong>Sarah & Ahmed</strong>
+            <span>Wedding Couple</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testi-text">"Professional, creative, and so easy to work with. My portrait session was relaxed and fun, and the results blew me away!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <strong>Maria L.</strong>
+            <span>Portrait Client</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testi-text">"We hired ALNJATH for our corporate gala. The photos were stunning — capturing energy and elegance. Highly recommend!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <strong>James T.</strong>
+            <span>Event Director</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testi-text">"Absolutely incredible talent. The landscape prints I ordered are now hanging in my living room and everyone asks about them."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">N</div>
+          <div>
+            <strong>Noor K.</strong>
+            <span>Art Collector</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-nav">
+      <button id="testiPrev">&#8592;</button>
+      <button id="testiNext">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">ALNJATH</div>
+        <p>Photography</p>
+        <p class="footer-tagline">Capturing moments.<br/>Creating memories.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Pinterest</a>
+          <a href="#" class="social-link">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ALNJATH Photography. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
